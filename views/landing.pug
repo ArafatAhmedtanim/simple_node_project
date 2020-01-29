@@ -3,6 +3,9 @@ extends layout
 block content
     h1=title
     p Welcome to #{title}
+    if email
+        p Your Email : #{email}
+         
     form(action="/", method="POST")
-        input(type="email", placeholder="Enter your email address")
+        input(name="lead_email" type="email", placeholder="Enter your email address")
         button(type="submit") Submit
